@@ -134,6 +134,20 @@ body {
   }
 }
 @media (max-width: 450px) {
+  .logo {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .text {
+    font-size: 1.4rem;
+    width: 90%;
+  }
+
+  .logo-img {
+    height: 2.5rem;
+  }
   .roleta .roleta-image {
     display: block;
     max-height: 15rem;
