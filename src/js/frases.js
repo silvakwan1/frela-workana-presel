@@ -100,8 +100,11 @@
       const { imgSrc } = frases[rand];
       peopleFrase.innerHTML = frase;
       peopleImg.src = imgSrc;
+      contDiv.classList.add("disabled");
 
-      setTimeout(() => {}, 20);
+      setTimeout(() => {
+        contDiv.classList.toggle("disabled");
+      }, 300);
     }, 2400);
   });
 })();

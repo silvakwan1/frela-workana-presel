@@ -30,10 +30,16 @@
           <p>GIROU, GANHOU E <span class="color-purple"> SACOU </span> 💰✅</p>
         </div>
         <div class="roleta-img">
-          <img src="./src/img/roleta-purple.png" alt="" />
+          <img class="roleta-image" src="./src/img/roleta-purple.png" alt="" />
+          <img
+            onclick="spin()"
+            class="roleta-img-button"
+            src="./src/img/button-gire.png"
+            alt=""
+          />
         </div>
         <div class="roleta-button">
-          <button>GIRE PARA GANHAR</button>
+          <button onclick="spin()">GIRE PARA GANHAR</button>
         </div>
       </div>
     </main>
@@ -48,6 +54,7 @@
         </p>
       </div>
     </footer>
+    <script src="./src/js/spin.js"></script>
     <script src="./src/js/frases.js"></script>
   </body>
 </html>

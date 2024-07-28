@@ -7,12 +7,15 @@
 :root {
   --text-color-padrao: #fff;
   --text-color-porple: #aa22a3;
-  --borde-footer: 1px solid #e600ff;
+  --borde-footer: 2px solid #75237e62;
+  --box-shadow-button: 6px 5px 19px #aa22a3;
+  --bg-button: #aa22a3;
 }
 
 body {
   height: 100vh;
-  background: url(../img/background-purple.jpg) center;
+  background: url(../img/background-purple.jpg);
+  background-position: 80%;
 }
 
 .content {
@@ -55,14 +58,37 @@ body {
   }
 }
 
-.roleta .roleta-img img {
+.roleta .roleta-img {
+  position: relative;
+}
+.roleta .roleta-image {
+  display: block;
   max-height: 20rem;
+  animation: animeite 0.5s alternate infinite;
+}
+
+@keyframes animeite {
+  to {
+    transform: rotate(5deg);
+  }
+  from {
+    transform: rotate(-5deg);
+  }
+}
+
+.roleta-img-button {
+  height: 4rem;
+  z-index: 20;
+
+  position: absolute;
+  bottom: 40%;
+  left: 40%;
 }
 
 .roleta-button button {
-  background: #aa22a3;
-  box-shadow: 6px 5px 19px#aa22a3;
-  color: #fff;
+  background: var(--bg-button);
+  box-shadow: var(--box-shadow-button);
+  color: var(--text-color-padrao);
   padding: 0.8rem 1.2rem;
   border-radius: 2rem;
   text-decoration: none;
@@ -85,6 +111,10 @@ body {
   gap: 1.5rem;
 }
 
+.footer .people.disabled {
+  display: none;
+}
+
 .footer .people #people-img {
   height: 3rem;
   border-radius: 500px;
@@ -92,4 +122,23 @@ body {
 
 .footer .people #people-p {
   color: var(--text-color-padrao);
+}
+
+@media (max-width: 900px) {
+  .roleta .roleta-image {
+    display: block;
+    max-height: 17rem;
+  }
+  .roleta-img-button {
+    height: 3.5rem;
+  }
+}
+@media (max-width: 450px) {
+  .roleta .roleta-image {
+    display: block;
+    max-height: 15rem;
+  }
+  .roleta-img-button {
+    height: 3rem;
+  }
 }
