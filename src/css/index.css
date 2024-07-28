@@ -133,26 +133,40 @@ body {
     height: 3.5rem;
   }
 }
+@media (max-height: 760px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo-img {
+    height: 2rem;
+  }
+  .text {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
 @media (max-width: 450px) {
   .logo {
     margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
   }
 
   .text {
-    font-size: 1.4rem;
-    width: 90%;
+    font-size: 1.3rem;
   }
 
   .logo-img {
     height: 2.5rem;
   }
+
   .roleta .roleta-image {
     display: block;
-    max-height: 15rem;
+    max-height: 17rem;
   }
   .roleta-img-button {
-    height: 3rem;
+    height: 3.5rem;
   }
 }
