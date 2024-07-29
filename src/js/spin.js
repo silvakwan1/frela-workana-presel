@@ -1,17 +1,26 @@
 function spin() {
   const popUp = document.querySelector(".pop-up");
   const roleta = document.querySelector(".roleta-image");
-  const audio = document.querySelector(".audio");
+  const roulette = document.querySelector("#roulette");
+  const success = document.querySelector("#success");
 
   roleta.classList.add("spin");
-  audio.play();
-  setInterval(() => {
+  roulette.play();
+
+  setTimeout(() => {
     roleta.classList.add("ganhador");
   }, 2500);
-  setInterval(() => {
-    audio.pause();
+
+  setTimeout(() => {
+    roulette.pause();
   }, 5000);
-  setInterval(() => {
+
+  setTimeout(() => {
+    success.play();
     popUp.classList.add("pop-up-active");
   }, 7500);
+
+  setTimeout(() => {
+    success.pause();
+  }, 12500);
 }
