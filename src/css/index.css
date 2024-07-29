@@ -5,6 +5,8 @@
   color: #fff;
 }
 
+/* as variaves do site */
+
 :root {
   --text-color-padrao: #fff;
   --text-color-porple: #aa22a3;
@@ -20,18 +22,22 @@ body {
   background-position: 80%;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
+/* a cor dos span que muda certa parte do texto de cor */
 
 .color-purple {
   color: var(--text-color-porple);
 }
 .color-green {
   color: var(--text-color-green);
+}
+
+/* main */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .logo {
@@ -45,11 +51,12 @@ body {
 }
 
 .text {
-  color: var(--text-color-padrao);
   font-size: 1.5rem;
   text-align: center;
   width: 85%;
 }
+
+/* roleta */
 
 .roleta {
   display: flex;
@@ -58,7 +65,6 @@ body {
   gap: 2rem;
 
   & p {
-    color: var(--text-color-padrao);
     font-size: 1.2rem;
   }
 }
@@ -119,14 +125,16 @@ body {
 .roleta-button button {
   background: var(--bg-button);
   box-shadow: var(--box-shadow-button);
-  color: var(--text-color-padrao);
+
   padding: 0.8rem 1.2rem;
   border-radius: 2rem;
   text-decoration: none;
   outline: none;
   border: none;
 }
-/*   */
+
+/*  footer */
+
 .footer .people {
   max-height: 5rem;
   height: 100%;
@@ -151,9 +159,7 @@ body {
   border-radius: 500px;
 }
 
-.footer .people #people-p {
-  color: var(--text-color-padrao);
-}
+/* pop-up */
 
 .pop-up {
   position: absolute;
@@ -165,22 +171,23 @@ body {
   width: 100vw;
   display: none;
   place-items: center;
-  padding: 1rem;
+  padding: 0.9rem;
 }
 .pop-up.pop-up-active {
   display: grid;
 }
 
 .pop-up--card {
+  width: 100%;
   background: #aa22a357;
   padding: 1.5rem 2rem;
   border-radius: 20px;
   max-width: 400px;
-  width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin-top: 1 00px;
+
   position: relative;
 }
 .balao-img-top,
@@ -206,7 +213,7 @@ body {
     font-size: 3rem;
     text-transform: uppercase;
     font-family: monospace, "Courier New", Courier;
-    color: var(--text-color-padrao);
+
     text-shadow: 3px 3px 0 black, -3px 3px 0 black, 3px -3px 0 black,
       -3px -3px 0 black;
   }
@@ -218,6 +225,7 @@ body {
 .pop-up--button {
   text-align: center;
   margin-bottom: 1rem;
+
   & a {
     text-decoration: none;
     padding: 6px 1.2rem;
@@ -228,11 +236,14 @@ body {
   }
 }
 
+/* midia query */
+
 @media (max-width: 900px) {
   .roleta .roleta-image {
     display: block;
     max-height: 17rem;
   }
+
   .roleta-img-button {
     height: 3.5rem;
   }
@@ -244,9 +255,11 @@ body {
     align-items: center;
     gap: 1rem;
   }
+
   .logo-img {
     height: 2rem;
   }
+
   .text {
     font-size: 1rem;
     line-height: 1.2rem;
@@ -270,6 +283,7 @@ body {
     display: block;
     max-height: 17rem;
   }
+
   .roleta-img-button {
     height: 3.5rem;
   }
