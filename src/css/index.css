@@ -183,9 +183,9 @@ body {
   padding: 0.9rem;
 }
 
-/* .pop-up.pop-up-active {
+.pop-up.pop-up-active {
   display: grid;
-} */
+} 
 
 .pop-up--card {
   width: 100%;
