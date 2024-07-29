@@ -12,20 +12,23 @@
   --text-color-porple: #aa22a3;
   --text-color-green: rgb(42, 255, 42);
   --borde-footer: 2px solid #75237e62;
-  --box-shadow-button: 6px 5px 19px #aa22a3;
-  --bg-button: #aa22a3;
+  --box-shadow-button: 2px 3px 6px #aa22a3;
+  --bg-button: #08bc0c;
 }
 
 body {
   height: 100vh;
-  background: url(../img/background-purple.jpg);
+  background: url(../img/bg-purple.png);
   background-position: 80%;
 }
 
 /* a cor dos span que muda certa parte do texto de cor */
 
-.color-purple {
+/* .color-purple {
   color: var(--text-color-porple);
+} */
+.color-purple {
+  color: var(--text-color-green);
 }
 .color-green {
   color: var(--text-color-green);
@@ -72,35 +75,41 @@ body {
 .roleta .roleta-img {
   position: relative;
 }
+
 .roleta .roleta-image {
   display: block;
   max-height: 20rem;
   animation: animeite 0.5s alternate infinite linear;
 }
+.roleta .roleta-image {
+  display: block;
+  max-height: 20rem;
+}
+
 .roleta .roleta-image.spin {
   animation: spin 1s infinite linear;
 }
 
 .roleta .roleta-image.spin.ganhador {
-  animation: spinGanhador 4s linear;
-  transform: rotate(135deg);
-}
-
-@keyframes spinGanhador {
-  to {
-    transform: rotate(475deg);
-  }
-  from {
-    transform: rotate(645deg);
-  }
+  animation: spinGanhador 2.7s linear;
+  transform: rotate(310deg);
 }
 
 @keyframes spin {
-  to {
+  from {
     transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinGanhador {
   from {
-    transform: rotate(445deg);
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(310deg);
   }
 }
 
@@ -173,9 +182,10 @@ body {
   place-items: center;
   padding: 0.9rem;
 }
-.pop-up.pop-up-active {
+
+/* .pop-up.pop-up-active {
   display: grid;
-}
+} */
 
 .pop-up--card {
   width: 100%;
@@ -234,6 +244,10 @@ body {
     font-weight: bold;
     box-shadow: var(--box-shadow-button);
   }
+}
+
+.audio {
+  display: none;
 }
 
 /* midia query */
