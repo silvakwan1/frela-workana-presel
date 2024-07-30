@@ -13,14 +13,14 @@
   --text-color-porple: #aa22a3;
   --text-color-green: rgb(42, 255, 42);
   --borde-footer: 2px solid #75237e62;
-  --box-shadow-button: 2px 3px 6px #aa22a3;
+  --box-shadow-button: 2px 3px 6px #011de2;
   --bg-button: #08bc0c;
 }
 
 body {
   height: 100vh;
-  background: url(../img/bg-purple.png);
-  background-position: 80%;
+  background: url(../img/background-blue.jpg) center;
+
   background-size: cover;
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 .logo-img {
-  height: 2.8rem;
+  height: 4rem;
 }
 
 .text {
@@ -80,12 +80,9 @@ body {
 
 .roleta .roleta-image {
   display: block;
-  max-height: 20rem;
+  max-height: 22rem;
+  height: 100%;
   animation: animeite 0.5s alternate infinite linear;
-}
-.roleta .roleta-image {
-  display: block;
-  max-height: 20rem;
 }
 
 .roleta .roleta-image.spin {
@@ -187,11 +184,11 @@ body {
 
 .pop-up.pop-up-active {
   display: grid;
-} 
+}
 
 .pop-up--card {
   width: 100%;
-  background: #aa22a357;
+  background: #011be28a;
   padding: 1.5rem 2rem;
   border-radius: 20px;
   max-width: 400px;
@@ -254,27 +251,22 @@ body {
 
 /* midia query */
 
-@media (max-width: 900px) {
-  .roleta .roleta-image {
-    display: block;
-    max-height: 17rem;
-  }
-
-  .roleta-img-button {
-    height: 3.5rem;
-  }
-}
 @media (max-height: 760px) {
   .content {
     gap: 1rem;
   }
 
   .logo-img {
-    height: 2rem;
+    height: 3.2rem;
   }
-
+  .roleta .roleta-image {
+    display: block;
+    max-height: 19rem;
+    height: 100%;
+    animation: animeite 0.5s alternate infinite linear;
+  }
   .text {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.2rem;
   }
 }
